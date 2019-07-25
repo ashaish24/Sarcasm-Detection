@@ -11,6 +11,7 @@ of the word sarcasm or sarcastic. If after this stage the tweet is not empty and
 
 ### Feature Extraction 
 Five features are extracted from the tweets:
+
 Feature 1 - n-grams - To extract those, each tweet is tokenized, stemmed, uncapitalized. Porter Stemmer algorithm is used for stemming the words to their base word. nltk package is used for extracting the unigram and bigram from each sentence.
 
 Feature 2 - Sentiments - First the tweet slang and emojis must be converted to a recognisable word. (example: :-) –good, u –you). A tweet is broken up into two and three parts. Sentiment scores are calculated using two libraries (SentiWordNet and TextBlob). Positive and negative sentiment scores are collected for the overall tweet as well as each individual part. Furthermore, the contrast between the parts are inserted into the features. SentiWordNet and TextBlob libraries are used to extract sentiment from sentence.
@@ -23,4 +24,4 @@ Feature 4- Parts of Speech -The parts of speech in each tweet are counted and in
 
 Feature 5 - Capitalizations - A binary flag indicating whether the tweet contains at least 4 tokens that start with a capitalization is inserted into the features. isupper() function is used to get the count of capital letters in each word.
 
-## SVM classifier Algorithm 4.2 is used for classifying sarcastic tweets.
+### SVM classifier Algorithm 4.2 is used for classifying sarcastic tweets.
