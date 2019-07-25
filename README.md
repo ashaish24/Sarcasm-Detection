@@ -2,14 +2,14 @@
 Detects whether a given sentence is sarcastic or non-sarcastic. It uses SVM classifier to classify the sentence as sarcastic or
 not, by training the classifier using the features extracted from the given text.
 
-## Dataset Collection 
+### Dataset Collection 
 Twitter API can be used to stream tweets with the label sarcasm (sarcastic texts) and other tweets that dont have the label sarcasm (non-sarcastic texts). 
 
-## Preprocessing 
+### Preprocessing 
 Removal of all the hashtags, http links, non ASCII characters and tweets that start with the @ symbol. Removal of @tagging and any mention
 of the word sarcasm or sarcastic. If after this stage the tweet is not empty and contains at least 3 words, it is added to the dataset list.
 
-## Feature Extraction 
+### Feature Extraction 
 Five features are extracted from the tweets:
 Feature 1 - n-grams - To extract those, each tweet is tokenized, stemmed, uncapitalized. Porter Stemmer algorithm is used for stemming the words to their base word. nltk package is used for extracting the unigram and bigram from each sentence.
 
